@@ -26,14 +26,10 @@ class Solution:
             # 此处相当于将"merged"这个指针指向"merged.next"的地址上去
             # 而head指针始终是初始的头指针，指向初始的地址
             merged = merged.next
-        while l1:
+        if l1:
             merged.next = l1
-            l1 = l1.next
-            merged = merged.next
 
-        while l2:
+        if l2:
             merged.next = l2
-            l2 = l2.next
-            merged = merged.next
 
         return head.next
