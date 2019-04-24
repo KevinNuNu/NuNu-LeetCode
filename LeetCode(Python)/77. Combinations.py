@@ -19,7 +19,7 @@ class Solution(object):
             for idx, ele in enumerate(left_element):
                 cur.append(ele)
                 dfs(left_element[idx+1:], cur, target-1)
-                cur.remove(ele)
+                cur.pop()
             return
 
         all_ele = [i + 1 for i in range(n)]
